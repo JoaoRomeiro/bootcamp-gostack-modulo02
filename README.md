@@ -80,3 +80,54 @@ Da forma como foi configurado o container, ele pode ser utilizado por diversas a
 deixá-lo exclusivo para uma determinada aplicação.
 
 Isso será abordado em breve
+
+# Sequelize & MVC
+
+Sequelize é uma ORM para NodeJs e bancos de dados realcionais
+
+ORM: É uma forma abstrair um banco de dados
+- Tabelas viram models
+
+Manipulação de dados
+É feita através de códigos JavaScripts
+
+Migrations
+- Controle de versão para base de dados
+- É uma forma de manter a base de dados atualizada entre todos o desenvolvedores
+- Migration funciona através de arquivos que contém instruções para criação, alteração ou remoção de tabelas e colunas
+- As migrations ocorrem por data
+- Cada migration deve manipular apenas uma tabela
+
+Seeds
+- Populam a base de dados para desenvolvimento
+- Populam a base de dados para testes
+- São executaveis apenas por códigos
+- Jamais serão utilizados em produção
+- Caso seja necessário utilizar os dados na produção, a migration é que ficará responsável por isso
+
+Arquitetura MVC
+
+Basicamente é a estruturação de pastas e arquivos na nossa aplicação afim de separar as responsabilidades de cada tipo de arquivo
+
+Model: 
+- Armazena a abstração do banco de dados, utilizado para manipular os dados contidos nas tabelas do banco e 
+  não possuem responsabilidades sobre a regra de negócio da nossa aplicação
+
+Controller:  
+- É o ponto de entrada das requisições da nossa aplicação, uma rota geralmente está associada diretamente com um método no controller.
+  Podemos incluir a grande parte das regras de negócio da aplicação nos controllers (conforme a aplicação cresce, 
+  podemos isolar as regras através de pathers)
+
+View:
+- É o retorno ao cliente, em aplicações que não utilizamos o modelo de API\REST isso pode ser um HTML, mas no caso desse curso a view é
+  apenas o JSON que será retornado para o front-end e depois manipulado pelo ReactJS ou React Native.
+
+A face de um controller
+- São classes
+- Sempre retornam um JSON
+- Não chamam outro controller \ método
+
+Quando criamos um novo controller 
+- Quando possuímos uma nova entidade
+- Nem sempre uma entidade será um model, mas um model normalmente sempre terá um controller
+- Apenas 5 métodos
