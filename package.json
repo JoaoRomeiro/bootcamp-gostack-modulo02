@@ -10,6 +10,7 @@
     "dev:debug": "nodemon --inspect src/server.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
     "global": "^4.4.0",

@@ -185,3 +185,7 @@ Estrutura de pastas e arquivos
 # Model de usuário
 
 # Criando loader de models
+
+# Gerando hash da senha
+
+<yarn add bcryptjs>
