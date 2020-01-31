@@ -181,3 +181,5 @@ Estrutura de pastas e arquivos
 
 <yarn sequelize db:migrate:undo> // Desfaz a última migrate
 <yarn sequelize db:migrate:undo:all> // Desfaz todas a migrations
+
+# Model de usuário
