@@ -183,3 +183,5 @@ Estrutura de pastas e arquivos
 <yarn sequelize db:migrate:undo:all> // Desfaz todas a migrations
 
 # Model de usuário
+
+# Criando loader de models
