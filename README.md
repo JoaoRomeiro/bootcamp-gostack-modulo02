@@ -131,3 +131,44 @@ Quando criamos um novo controller
 - Quando possuímos uma nova entidade
 - Nem sempre uma entidade será um model, mas um model normalmente sempre terá um controller
 - Apenas 5 métodos
+
+# ESLint, Prettier & EditorConfig
+
+Neste módulo ocorreu a padrozinação do projeto
+
+ESLint
+- Ele verifica se o código esta seguindo padrões
+
+Instala o ESLint
+<yarn add eslint -D>
+
+Iniciar o ESLint
+<yarn eslint --init>
+To check syntax, find problems, and enforce code style
+JavaScript modules (import/export)
+
+Esta merda de ESLint não funcionou!!!
+
+Instala o Prettier
+<yarn add prettier eslint-config-prettier eslint-plugin-prettier -D>
+
+# 05 Configurando Sequelize
+
+Estrutura de pastas e arquivos
+<mkdir ./src/config>
+<touch ./src/config/database.js>
+
+<mkdir ./src/database>
+<mkdir ./src/database/migrations>
+
+<mkdir ./src/app>
+<mkdir ./src/app/controllers>
+<mkdir ./src/app/models>
+
+<yarn add sequelize>
+<yarn add sequelize-cli - D> // não funcionou como dependecia de desenvolvimento
+<yarn add sequelize-cli>
+
+<touch .sequelizerc>
+
+<yarn add pg pg-hstore>
