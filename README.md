@@ -172,3 +172,12 @@ Estrutura de pastas e arquivos
 <touch .sequelizerc>
 
 <yarn add pg pg-hstore>
+
+# Migration de usuário
+
+<yarn sequelize migration:create --name=Create-Users>
+
+<yarn sequelize db:migrate>
+
+<yarn sequelize db:migrate:undo> // Desfaz a última migrate
+<yarn sequelize db:migrate:undo:all> // Desfaz todas a migrations
