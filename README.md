@@ -189,3 +189,26 @@ Estrutura de pastas e arquivos
 # Gerando hash da senha
 
 <yarn add bcryptjs>
+
+# Conceitos de JWT
+
+JWT: Json Web Token
+
+POST http://api.com/sessions
+
+{
+    "email": "j.romeiro@live.com",
+    "password": "123456"
+}
+
+Retorno do Token JWT
+
+<Headrs (tipo de token, algoritmo)>.<Payload (dados adicionais do usuário)>.<Assinatura>
+$08$u8lt5sT/.1N2Kcg4AqawOefP.iYwv6DRx3t5MTRST08l8Q0EKHuRu
+
+# Autenticação JWT
+
+<yarn add jsonwebtoken>
+
+Obter um hash: https://www.md5online.org/
+82982ee82d418e861d314886fbb3e49a
