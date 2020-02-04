@@ -85,7 +85,7 @@ Isso será abordado em breve
 
 Sequelize é uma ORM para NodeJs e bancos de dados realcionais
 
-ORM: É uma forma abstrair um banco de dados
+ORM (Object-relational mapping): É uma forma abstrair um banco de dados
 - Tabelas viram models
 
 Manipulação de dados
@@ -212,3 +212,23 @@ $08$u8lt5sT/.1N2Kcg4AqawOefP.iYwv6DRx3t5MTRST08l8Q0EKHuRu
 
 Obter um hash: https://www.md5online.org/
 82982ee82d418e861d314886fbb3e49a
+
+# Validando dados de entrada
+
+Instalando o yup, uma biblioteca de validação
+<yarn add yup>
+
+# Configurando Multer
+Nesta aula, será ensinado a maneira pela qual devemos enviar arquivos físicos para o servidor sem alterar a estruta JSON.
+
+É importante lembrar que o JSON não suporta arquivos físicos, como por exemplo, fotos, documentos pdf e etc.
+
+Instalar o mutler, biblioteca responsável por fazer o upload de arquivo
+<yarn add multer>
+
+Criar uma pasta na raiz do projeto chamada tmp e dentro dela uma pasta chamada updaloads
+<mkdir ./tmp>
+<mkdir ./tmp/uploads>
+
+Criar um arquivo chamado multer.js na qual ficará armazenada toda a parte de configuração de updload de arquivos
+<touch ./src/config/multer.js>
