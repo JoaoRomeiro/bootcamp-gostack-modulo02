@@ -254,3 +254,6 @@ Importar o Model File no FileController
 
 Adicionar um novo campos na tabela de usuarios para referencia a tabela File
 <yarn sequelize migration:create --name=add-avatar-field-to-users>
+
+Executar a migrate
+<yarn sequelize db:migrate>
