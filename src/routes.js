@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import FileController from './app/controllers/FileController';
 import authMiddleware from './app/middlewares/auth';
 import multerConfig from './config/multer';
 
@@ -15,8 +16,6 @@ router.post('/sessions', SessionController.store);
 router.use(authMiddleware);
 router.put('/users', UserController.update);
 
-router.post('/files', update.single('file'), (req, res) => {
-  return res.json({ ok: true });
-});
+router.post('/files', update.single('file'), FileController.store);
 
 export default router;

@@ -232,3 +232,25 @@ Criar uma pasta na raiz do projeto chamada tmp e dentro dela uma pasta chamada u
 
 Criar um arquivo chamado multer.js na qual ficará armazenada toda a parte de configuração de updload de arquivos
 <touch ./src/config/multer.js>
+
+# Avatar do usuário
+Criar o controller FileController
+<touch ./src/app/controllers/FileController.js>
+
+Após configura o controller, criar uma tabela para armazenar o link do arquivo importado
+
+Criar uma tabela no banco através de uma migrate
+<yarn sequelize migration:create --name=Create-Files>
+
+Depois de configurar o Migrate, execute-o para criar a tabela no banco
+<yarn sequelize db:migrate>
+
+Criar o model da tabela file
+<touch ./src/app/models/File.js>
+
+Referenciar o model File no arquivo src/app/database/index.js da mesma forma que modelo User foi referenciado
+
+Importar o Model File no FileController
+
+Adicionar um novo campos na tabela de usuarios para referencia a tabela File
+<yarn sequelize migration:create --name=add-avatar-field-to-users>
