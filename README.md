@@ -257,3 +257,7 @@ Adicionar um novo campos na tabela de usuarios para referencia a tabela File
 
 Executar a migrate
 <yarn sequelize db:migrate>
+
+# Listagem de prestadores de serviço
+
+<touch ./src/app/controllers/ProviderController.js>

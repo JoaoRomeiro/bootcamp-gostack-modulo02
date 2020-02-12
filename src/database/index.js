@@ -15,7 +15,7 @@ class DataBase {
 
     models
       .map(model => model.init(this.conection))
-      .map(mode => model.associate && model.associate(this.conection.models));
+      .map(model => model.associate && model.associate(this.conection.models));
   }
 }
 
