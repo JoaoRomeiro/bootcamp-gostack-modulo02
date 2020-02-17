@@ -147,10 +147,11 @@ Iniciar o ESLint
 To check syntax, find problems, and enforce code style
 JavaScript modules (import/export)
 
-Esta merda de ESLint não funcionou!!!
-
 Instala o Prettier
 <yarn add prettier eslint-config-prettier eslint-plugin-prettier -D>
+
+Corrigir todos os arquivos de uma só vez
+<yarn eslint --fix src --ext .js>
 
 # 05 Configurando Sequelize
 
