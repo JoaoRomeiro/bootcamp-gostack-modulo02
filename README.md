@@ -109,13 +109,13 @@ Arquitetura MVC
 
 Basicamente é a estruturação de pastas e arquivos na nossa aplicação afim de separar as responsabilidades de cada tipo de arquivo
 
-Model: 
-- Armazena a abstração do banco de dados, utilizado para manipular os dados contidos nas tabelas do banco e 
+Model:
+- Armazena a abstração do banco de dados, utilizado para manipular os dados contidos nas tabelas do banco e
   não possuem responsabilidades sobre a regra de negócio da nossa aplicação
 
-Controller:  
+Controller:
 - É o ponto de entrada das requisições da nossa aplicação, uma rota geralmente está associada diretamente com um método no controller.
-  Podemos incluir a grande parte das regras de negócio da aplicação nos controllers (conforme a aplicação cresce, 
+  Podemos incluir a grande parte das regras de negócio da aplicação nos controllers (conforme a aplicação cresce,
   podemos isolar as regras através de pathers)
 
 View:
@@ -127,7 +127,7 @@ A face de um controller
 - Sempre retornam um JSON
 - Não chamam outro controller \ método
 
-Quando criamos um novo controller 
+Quando criamos um novo controller
 - Quando possuímos uma nova entidade
 - Nem sempre uma entidade será um model, mas um model normalmente sempre terá um controller
 - Apenas 5 métodos
@@ -262,3 +262,43 @@ Executar a migrate
 # Listagem de prestadores de serviço
 
 <touch ./src/app/controllers/ProviderController.js>
+
+# Migration e model de agendamento
+
+1) Cria a tabela de agendamento de compromissos
+<yarn sequelize migration:create --name=create-appointments>
+
+2) Configura a migrate com a seguinte estrutura
+
+id: Integer
+date: Date not null // Data do agendamento
+user_id: Integer foreign key with Users // Usuário fazendo o agendamento
+provider_id:  Integer foreign key with Users // Prestador de serviço
+canceled_at: Date // Data do cancelamento
+
+3) Cria o model Appointments
+
+4) Cadastrar o model Appointments no arquivo index.js
+
+# Validações de agendamento
+
+1) Instalar a biblioteca de gerenciamento de data
+<yarn add date-fns@next> // @next instala a ultima versão
+
+2) Não permitir o agendamento de datas que não sejam inteiras, por exemplo, não permitir 19:30, apenas 19:00
+
+# Listando agendamentos do usuário
+
+# Aplicando paginação
+
+# Listando agenda do prestador
+
+# Configurando MongoDB
+
+1) Instalar o mongo no docker
+<docker run --name mongobarber -p 27017:27017 -d -t mongo>
+
+2) Intalar o mongoose
+<yarn add mongoose>
+
+# Notificando novos agendamentos
