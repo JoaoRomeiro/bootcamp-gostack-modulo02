@@ -8,6 +8,7 @@ import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
 import authMiddleware from './app/middlewares/auth';
 import multerConfig from './config/multer';
+import NotificationController from './app/controllers/NotificationController';
 
 const router = new Router();
 const update = multer(multerConfig);
@@ -27,5 +28,8 @@ router.get('/appointments', AppointmentController.index);
 router.get('/schedules', ScheduleController.index);
 
 router.get('/providers', ProviderController.index);
+
+router.get('/notifications', NotificationController.index);
+router.put('/notifications/:id', NotificationController.update);
 
 export default router;

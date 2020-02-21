@@ -84,6 +84,13 @@ class AppointmentController {
         .json({ error: 'Appointment date is not available' });
     }
 
+    /**
+     * Check user is a provider
+     */
+    if (req.userIs === provider_id) {
+      return res.status(400).json({ error: 'User cannot be a provider' });
+    }
+
     const appointment = await Appointment.create({
       date,
       user_id: req.userId,
