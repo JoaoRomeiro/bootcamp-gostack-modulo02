@@ -24,6 +24,7 @@ router.post('/files', update.single('file'), FileController.store);
 
 router.post('/appointments', AppointmentController.store);
 router.get('/appointments', AppointmentController.index);
+router.delete('/appointments/:id', AppointmentController.delete);
 
 router.get('/schedules', ScheduleController.index);
 

@@ -167,8 +167,7 @@ Estrutura de pastas e arquivos
 <mkdir ./src/app/models>
 
 <yarn add sequelize>
-<yarn add sequelize-cli - D> // não funcionou como dependecia de desenvolvimento
-<yarn add sequelize-cli>
+<yarn add sequelize-cli -D> // não funcionou como dependecia de desenvolvimento
 
 <touch .sequelizerc>
 
