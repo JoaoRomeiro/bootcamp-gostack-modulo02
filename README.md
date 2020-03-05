@@ -301,3 +301,13 @@ canceled_at: Date // Data do cancelamento
 <yarn add mongoose>
 
 # Notificando novos agendamentos
+
+# Configurando templates de e-mail
+<yarn add express-handlebars nodemailer-express-handlebars>
+
+# Configurando fila com Redis
+1) Instalar o Redis
+<docker run --name redisbarber -p 6379:6379 -d -t redis:alpine>
+
+2) Instalar o Bee-queue
+<yarn add bee-queue>
